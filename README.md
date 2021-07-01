@@ -1,7 +1,7 @@
 # NumpyNet
-Neural network implemented with Numpy in ~100 lines code
+Neural network implemented with Numpy in ~100 lines of code
 
-A feed-forward neural network implemented with Numpy achieved decent performance (~98% accuracy) compared to state-of-the-arts.
+A feed-forward neural network implemented with Numpy achieved decent performance (~98% accuracy on MNIST dataset) compared to state-of-the-arts.
 
 ### YouTube link: https://youtu.be/Jp7fR1iP-ew
 
@@ -17,6 +17,7 @@ SGD with Mini-batch and learning rate decay are also implemented.
 ```
 
 
+_A 2 hidden-layer implementation can be found in example folder._ 
 ### Forward and backward propagations
 ```python
     def forward(self, x):
@@ -98,4 +99,11 @@ SGD with Mini-batch and learning rate decay are also implemented.
 ```python
 model = NumpyNet(nodes = [784, 128, 64, 10], epochs = 20, lr = 0.5)
 model.train(x_train,y_train,x_test,y_test, batch_size = 4, lr_decay = True)
+```
+
+### Prediction
+```python
+np.argmax(model.forward(x_test[110])) #predict the class of a test image
+plt.imshow(x_test[110].reshape(28, 28), cmap='gray') #visualize the image
+
 ```
