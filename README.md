@@ -3,8 +3,6 @@ Neural network implemented with Numpy in ~100 lines of code
 
 A feed-forward neural network implemented with Numpy achieved decent performance (~98% accuracy on MNIST dataset) compared to state-of-the-arts.
 
-### YouTube link: https://youtu.be/Jp7fR1iP-ew
-
 SGD with Mini-batch and learning rate decay are also implemented.
 
 ### CPU usage: 6-8% in AMD R7 5800H (8 cores)
